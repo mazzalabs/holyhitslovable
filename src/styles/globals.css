@@ -1,0 +1,279 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Global styles — Tailwind CSS v4
+   All design tokens are defined as CSS custom properties here so that both
+   Tailwind utilities AND raw CSS classes can reference them.
+
+   To customise colours, update the values in :root below.
+   Typography and spacing tokens are in src/config/theme.ts (for reference)
+   and mirrored here for the CSS layer.
+───────────────────────────────────────────────────────────────────────────── */
+
+/* Tailwind v4: single import replaces @tailwind base/components/utilities */
+@import "tailwindcss";
+
+/* ── Tailwind v4 theme extension ────────────────────────────────────────── */
+@theme {
+  /* Fonts */
+  --font-display: 'Orbitron', sans-serif;
+  --font-sans: 'Outfit', system-ui, sans-serif;
+
+  /* Brand colours — derived from the Holy Hits logo (red + silver) */
+  --color-background: oklch(8% 0 0);
+  --color-foreground: oklch(95% 0 0);
+  --color-card: oklch(12% 0.003 27);
+  --color-card-foreground: oklch(95% 0 0);
+  --color-primary: oklch(50% 0.22 27);          /* vivid red — logo HITS */
+  --color-primary-foreground: oklch(97% 0 0);   /* near-white on red */
+  --color-secondary: oklch(16% 0.006 27);
+  --color-secondary-foreground: oklch(95% 0 0);
+  --color-muted: oklch(16% 0.006 27);
+  --color-muted-foreground: oklch(65% 0.01 27);
+  --color-border: oklch(50% 0.22 27 / 0.3);     /* red-tinted border */
+  --color-input: oklch(50% 0.22 27 / 0.3);
+  --color-ring: oklch(50% 0.22 27);
+  --color-gold: oklch(50% 0.22 27);             /* kept as alias → now red */
+  --color-gold-soft: oklch(82% 0 0);            /* silver — logo HOLY */
+  --color-chat: oklch(30% 0.04 27);             /* dark red-tinted chat bubble */
+
+  /* Gradients — metallic red + silver sweep matching the logo */
+  --gradient-gold: linear-gradient(
+    135deg,
+    oklch(38% 0.20 27)  0%,    /* dark crimson */
+    oklch(55% 0.23 27)  20%,   /* vivid red */
+    oklch(44% 0.21 27)  40%,   /* mid red */
+    oklch(88% 0.01 27)  55%,   /* silver highlight */
+    oklch(48% 0.22 27)  75%,   /* red again */
+    oklch(72% 0.00 0)   100%   /* soft silver */
+  );
+  --gradient-silver: linear-gradient(
+    135deg,
+    oklch(55% 0 0),
+    oklch(92% 0 0),
+    oklch(68% 0 0),
+    oklch(90% 0 0)
+  );
+
+  /* Shadows — red glow */
+  --shadow-glow:
+    0 0 24px oklch(50% 0.22 27 / 0.45),
+    0 0 60px oklch(50% 0.22 27 / 0.20);
+
+  /* Border radius */
+  --radius: 0.75rem;
+
+  /* Animations */
+  --animate-shine: shine 6s ease-in-out infinite;
+  --animate-rise: rise 1.1s ease-out both;
+  --animate-sweep: sweep 1.8s ease-in-out infinite;
+
+  /* Keyframes */
+  @keyframes shine {
+    0%, 100% { background-position: 0%; }
+    50%       { background-position: 100%; }
+  }
+
+  @keyframes rise {
+    0%   { opacity: 0; transform: translateY(24px); }
+    100% { opacity: 1; transform: none; }
+  }
+
+  @keyframes sweep {
+    0%, 60% { transform: translate(-120%); }
+    100%    { transform: translate(120%); }
+  }
+}
+
+/* ── Reset & base typography ─────────────────────────────────────────────── */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Visible focus ring for keyboard users */
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 3px;
+    border-radius: var(--radius);
+  }
+}
+
+/* ── Reusable component classes ─────────────────────────────────────────── */
+@layer components {
+
+  /* ── Animated gold gradient text ─────────────────────────────────────── */
+  .text-gold-gradient {
+    background: var(--gradient-gold);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shine 6s ease-in-out infinite;
+  }
+
+  /* ── Logo mask with gold gradient ────────────────────────────────────── */
+  .logo-gold {
+    background: var(--gradient-gold);
+    background-size: 200% 200%;
+    animation: shine 6s ease-in-out infinite;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: 50%;
+    mask-position: 50%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+
+  /* ── Gold bordered card ───────────────────────────────────────────────── */
+  .gold-frame {
+    background:
+      linear-gradient(var(--color-card), var(--color-card)) padding-box,
+      var(--gradient-gold) border-box;
+    border: 1px solid transparent;
+    box-shadow: var(--shadow-glow);
+    position: relative;
+  }
+
+  /* ── Primary CTA button ──────────────────────────────────────────────── */
+  .btn-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.6rem;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--color-primary-foreground);
+    background: var(--gradient-gold);
+    background-size: 200% 200%;
+    box-shadow: var(--shadow-glow), inset 0 1px 0 oklch(100% 0 0 / 0.6);
+    border-radius: 9999px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+  }
+
+  .btn-gold:hover {
+    transform: scale(1.04);
+    box-shadow:
+      0 0 32px oklch(50% 0.22 27 / 0.65),
+      0 0 80px oklch(50% 0.22 27 / 0.30),
+      inset 0 1px 0 oklch(100% 0 0 / 0.6);
+  }
+
+  .btn-gold:active {
+    transform: scale(0.98);
+  }
+
+  /* Shimmer sweep pseudo-element */
+  .btn-gold::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      105deg,
+      transparent 30%,
+      oklch(100% 0 0 / 0.35) 50%,
+      transparent 70%
+    );
+    transform: translate(-120%);
+    transition: none;
+  }
+
+  .btn-gold:hover::after {
+    animation: sweep 0.6s ease-in-out;
+  }
+
+  /* ── Secondary outline button ─────────────────────────────────────────── */
+  .btn-outline-gold {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.9rem 1.6rem;
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--color-gold);
+    background: transparent;
+    border: 1px solid oklch(50% 0.22 27 / 0.6);
+    border-radius: 9999px;
+    transition: border-color 0.3s, background 0.3s, transform 0.2s;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .btn-outline-gold:hover {
+    border-color: var(--color-gold);
+    background: oklch(50% 0.22 27 / 0.10);
+    transform: scale(1.04);
+  }
+
+  .btn-outline-gold:active {
+    transform: scale(0.98);
+  }
+
+  /* ── Section title divider ───────────────────────────────────────────── */
+  .section-divider {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.25rem;
+    height: 1px;
+    width: 6rem;
+    background: var(--gradient-gold);
+    opacity: 0.7;
+  }
+
+  /* ── Thin custom scrollbar for snap-scroll rows ──────────────────────── */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: oklch(50% 0.22 27 / 0.4) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: oklch(50% 0.22 27 / 0.4);
+    border-radius: 9999px;
+  }
+}
