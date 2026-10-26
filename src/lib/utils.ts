@@ -43,6 +43,17 @@ export function youtubeEmbedUrl(videoId: string): string {
 }
 
 /**
+ * Builds the Instagram embed URL for a post or reel.
+ * Uses /embed/ (not /embed/captioned/) so only the media player is rendered —
+ * no caption, no like count, no comments.
+ */
+export function instagramEmbedUrl(postUrl: string): string {
+  // Normalise: strip trailing slash, then append embed path
+  const base = postUrl.replace(/\/$/, '')
+  return `${base}/embed/`
+}
+
+/**
  * Renders a paragraph string that may contain a <highlight>…</highlight>
  * pseudo-tag into a React-renderable array of strings / JSX.
  *

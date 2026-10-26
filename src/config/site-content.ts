@@ -17,14 +17,14 @@ export const heroContent = {
    * Replace with your own image in /public/images/hero.jpg
    */
   backgroundImage: '/images/hero.jpg',
-  backgroundAlt: 'Julia Coronetti com chapéu sob o holofote',
+  backgroundAlt: 'Holy Hits',
 
   /**
    * Logo image used as a CSS mask so the gradient shines through.
    * Replace with your own PNG (white silhouette on transparent background).
    */
   logoImage: '/images/logo.png',
-  logoAlt: 'Julia Coronetti',
+  logoAlt: 'Holy Hits',
   /** Aspect ratio of the logo image in the format width/height */
   logoAspectRatio: '1278/542',
 } as const
@@ -37,12 +37,12 @@ export interface GalleryItem {
 }
 
 export const galleryItems: GalleryItem[] = [
-  { src: '/images/gallery/g1.jpg',           alt: 'Julia Coronetti no palco' },
-  { src: '/images/gallery/julia-microfone.jpg', alt: 'Julia Coronetti ao microfone' },
-  { src: '/images/gallery/julia-acordeon.jpg',  alt: 'Julia Coronetti com seu acordeon' },
-  { src: '/images/gallery/g4.jpg',           alt: 'Julia Coronetti ao vivo' },
-  { src: '/images/gallery/julia-estudio.jpg',   alt: 'Julia Coronetti no estúdio' },
-  { src: '/images/gallery/g6.jpg',           alt: 'Julia Coronetti em show' },
+  { src: '/images/anaclara.jpg',           alt: 'Holy Hits no palco' },
+  { src: '/images/will.jpg', alt: 'Holy Hits ao microfone' },
+  { src: '/images/bruno.jpg',  alt: 'Holy Hits com seu acordeon' },
+  { src: '/images/gaza.jpg',           alt: 'Holy Hits ao vivo' },
+  { src: '/images/ale.jpg',   alt: 'Holy Hits no estúdio' },
+  // { src: '/images/gallery/g6.jpg',           alt: 'Holy Hits em show' },
 ]
 
 // ── Testimonials ─────────────────────────────────────────────────────────────
@@ -59,20 +59,20 @@ export interface Testimonial {
 
 export const testimonials: Testimonial[] = [
   {
-    initials: 'M',
-    name: 'Mariana & Lucas',
+    initials: 'AG',
+    name: 'Ana & Gabriel',
     event: 'Casamento',
     time: '21:47',
     message:
-      'Julia, ainda estamos emocionados! Contratar você para o nosso casamento foi a melhor escolha que fizemos. A sanfona na entrada, a pista lotada até o fim… os convidados não param de comentar. Obrigada por tornar nosso dia inesquecível! ❤️',
+      'Ainda estamos emocionados! Contratar vocês para o nosso casamento foi a melhor escolha que fizemos. A sanfona na entrada, a pista lotada até o fim… os convidados não param de comentar. Obrigada por tornar nosso dia inesquecível! ❤️',
   },
   {
     initials: 'R',
-    name: 'Ricardo M.',
-    event: 'Confraternização da empresa',
+    name: 'Reynaldo',
+    event: 'Confraternização da faculdade',
     time: '10:12',
     message:
-      'Bom dia, Julia! O show na nossa confraternização foi um sucesso absoluto, a equipe inteira amou. Já quero deixar fechada a data da próxima, pode reservar pra gente! 👏',
+      'Bom dia, Ana! O show na nossa confraternização foi um sucesso absoluto, a turma inteira amou. Já quero deixar fechada a data da próxima, pode reservar pra gente! 👏',
   },
   {
     initials: 'F',
@@ -80,43 +80,61 @@ export const testimonials: Testimonial[] = [
     event: 'Fã',
     time: '19:30',
     message:
-      'Julia, não vejo a hora de ter outro show seu aqui na cidade! Me avisa assim que tiver data que eu quero garantir meu ingresso primeiro 😍🎶',
+      'Pessoal, não vejo a hora de ter outro show seu aqui na cidade! Me avisa assim que tiver data que eu quero garantir meu ingresso primeiro 😍🎶',
   },
 ]
 
 // ── About / Release ──────────────────────────────────────────────────────────
 
 export const aboutContent = {
-  image: '/images/gallery/julia-acordeon.jpg',
-  imageAlt: 'Julia Coronetti com seu acordeon',
+  image: '/images/bandastage.jpg',
+  imageAlt: 'Holy Hits com seu acordeon',
   sectionLabel: 'Release',
-  name: 'Julia Coronetti',
-  subtitle: 'Cantora e Acordeonista',
+  nameImage: '/images/logohorizontal.png',
+  nameImageAlt: 'Holy Hits',
   paragraphs: [
-    'Com 10 anos de carreira, Julia Coronetti vem construindo uma trajetória marcada pela paixão pela música sertaneja, pelo talento e por uma presença de palco que conquista o público por onde passa.',
-    'Sua história na música começou muito cedo: aos 10 anos de idade, lançou seu primeiro CD, intitulado "Julia Bem Sertanejo", dando os primeiros passos de uma carreira que hoje a leva a se apresentar em palcos por todo o Brasil, acompanhada de sua banda.',
-    'Ao longo de sua trajetória, Júlia também integrou bandas de baile, experiência que contribuiu para ampliar seu repertório musical, desenvolver sua versatilidade artística e conquistar um público cada vez mais diverso.',
+    'Adoramos os clássicos do <highlight>Pop/Rock Anos 80, 90 e 2000</highlight>, mas adoramos os <highlight>"riffs" de guitarra</highlight> mais pesados também.',
+    '- E agora, o que vamos tocar ?',
+    '- Por quê não juntar os dois ?',
     /**
      * Paragraphs can contain a single highlighted segment wrapped in a
      * `<highlight>` pseudo-tag. The component renders it as <span class="text-foreground">.
      */
-    'Entre os destaques de sua carreira está a vitória no quadro <highlight>"10 ou 1000", do Programa do Ratinho</highlight>, onde encantou o público com seu talento ao cantar e tocar sanfona. Além disso, participou de diversos programas de televisão, ampliando sua visibilidade e consolidando seu nome no cenário musical.',
-    'Unindo voz, sanfona, carisma e autenticidade, Julia Coronetti transforma cada apresentação em uma experiência de música e entretenimento, levando energia, emoção e alegria ao público. Com sua identidade sertaneja e uma presença de palco marcante, segue conquistando novos espaços e fortalecendo sua carreira no cenário musical brasileiro.',
+    'Dessa idéia, nasceu a banda <highlight>Holy Hits</highlight>, onde buscamos tocar os maiores clássicos porém em versões totalmente inovadoras e diferentes, trazendo versões mais modernas.',
+    'Já imaginou, <highlight>Tears for Fears, Depeche Mode, Erasure</highlight> e até mesmo <highlight>Haddaway</highlight> com guitarras e solos eletrizantes? Assita nossos videos e confira !',
   ],
 } as const
 
 // ── Videos ───────────────────────────────────────────────────────────────────
 
-export interface VideoItem {
-  /** YouTube video ID (the part after ?v= or /shorts/) */
-  youtubeId: string
-  label: string
-}
+export type VideoItem =
+  | {
+      type: 'youtube'
+      /** YouTube video ID (the part after ?v= or /shorts/) */
+      youtubeId: string
+      label: string
+    }
+  | {
+      type: 'instagram'
+      /** Full Instagram post / reel URL */
+      instagramUrl: string
+      label: string
+    }
+  | {
+      type: 'local'
+      /** Path relative to /public, e.g. '/images/video.mp4' */
+      src: string
+      /** Optional poster image path relative to /public */
+      poster?: string
+      label: string
+    }
 
 export const videoItems: VideoItem[] = [
-  { youtubeId: '3iJ1RFJ_2G4', label: 'Julia Coronetti – vídeo 1' },
-  { youtubeId: 'pjOecEDO86Q', label: 'Julia Coronetti – vídeo 2' },
-  { youtubeId: 'PDvtyOEOgZA', label: 'Julia Coronetti – vídeo 3' },
+  { type: 'local', src: '/images/polocerv2024.mp4', label: 'Holy Hits – video 1' },
+  // { type: 'instagram', instagramUrl: 'https://www.instagram.com/reel/C_EEY05xXpP?cr=1&v=14', label: 'Holy Hits – reel 1' },
+  { type: 'youtube', youtubeId: 'Ysg79AKPqMs', label: 'Holy Hits – vídeo 2' },
+  { type: 'local', src: '/images/motorock2024.mp4', label: 'Holy Hits – video 3' },
+  { type: 'local', src: '/images/ebpvma2025.mp4', label: 'Holy Hits – video 4' },
 ]
 
 // ── Pricing Plans ─────────────────────────────────────────────────────────────
@@ -150,28 +168,28 @@ export const showPlans: ShowPlan[] = [
   {
     id: 'A',
     label: 'PLANO A',
-    title: 'Show Acústico',
+    title: 'Show Eletro-Acústico',
     recommended: 'Bares e eventos de pequeno porte.',
     featured: false,
     featureGroups: [
       {
         label: 'Músicos',
-        items: ['Sanfona', 'Violão', 'Cajón'],
+        items: ['Vocalista', 'Violão/Guitarra', 'Cajón (Opcional)'],
       },
       {
         label: 'Backline',
         items: [
-          'Mesa de som digital Soundcraft Ui24',
+          'Mesa de som analogica Yamaha Emx312c',
           'Monitores de retorno in-ear sem fio',
           'Instrumentos com sistema sem fio',
-          'Microfones com sistema sem fio',
+          'Microfones e pedestais',
         ],
       },
     ],
     duration: '2 horas de apresentação',
-    soundInfo: '2 caixas de som ativas JBL, instaladas em pedestais.',
-    previewVideoUrl: 'https://youtube.com/shorts/llge72W9taQ',
-    price: 'R$ 1.200,00',
+    soundInfo: '2 caixas de som ativas Laney, instaladas em pedestais.',
+    previewVideoUrl: 'https://youtube.com/shorts/6RCHStmLNAw',
+    price: 'R$ 900,00',
     priceNote: '',
     disclaimers: [
       'O valor é válido para eventos realizados em um raio de até 60 km. Para distâncias superiores, necessidade de estrutura de som adicional ou tempo extra de apresentação, os valores poderão ser ajustados mediante negociação prévia.',
@@ -189,15 +207,14 @@ export const showPlans: ShowPlan[] = [
     badge: '★ MAIS ESCOLHIDO',
     featureGroups: [
       {
-        label: 'Equipe musical e técnica',
+        label: 'Musicos e técnica',
         items: [
-          'Cantora e sanfoneira',
-          'Segundo sanfoneiro',
-          'Violeiro e vocalista',
-          'Baterista',
-          'Contrabaixista e vocalista',
+          'Vocalista',
+          'Guitarra Solo e vocalista',
+          'Contra-Baixista e vocalista',
+          'Baterista e vocalista',
           'Técnica de som',
-          'Roadie (apoio técnico e montagem de equipamentos)',
+          // 'Roadie (apoio técnico e montagem de equipamentos)',
         ],
       },
       {
@@ -206,15 +223,16 @@ export const showPlans: ShowPlan[] = [
           'Mesa de som digital Soundcraft Ui24',
           'Monitores de retorno in-ear sem fio',
           'Instrumentos com sistema sem fio',
-          'Microfones com sistema sem fio',
+          'Microfones e pedestais',
+          '1 Microfones sistema sem fio',
         ],
       },
     ],
     duration: '2 horas de apresentação',
     soundInfo:
       'A estrutura de som deverá ser fornecida pelo contratante. Caso necessário, podemos indicar fornecedores parceiros com condições e custos mais acessíveis.',
-    previewVideoUrl: 'https://youtube.com/shorts/pjOecEDO86Q',
-    price: 'R$ 4.800,00',
+    previewVideoUrl: 'https://youtu.be/ODHtKTcLbKQ',
+    price: 'R$ 1.800,00',
     priceNote: 'Valor válido para eventos realizados em um raio de até 60 km.',
     disclaimers: [
       'Para eventos em distâncias superiores a 60 km, necessidade de estrutura de som adicional ou tempo extra de apresentação, os valores poderão ser ajustados mediante negociação prévia.',
@@ -234,14 +252,10 @@ export const showPlans: ShowPlan[] = [
       {
         label: 'Equipe musical e técnica',
         items: [
-          'Cantora e sanfoneira',
-          'Segundo sanfoneiro',
-          'Violeiro e vocalista',
-          'Baterista',
-          'Contrabaixista e vocalista',
-          'Guitarrista',
-          'Tecladista',
-          'Percussionista',
+          'Vocalista',
+          'Guitarra Solo e vocalista',
+          'Contra-Baixista e vocalista',
+          'Baterista e vocalista',
           'Técnico de som',
           'Técnico de iluminação',
           'Roadie (apoio técnico e montagem de equipamentos)',
@@ -257,8 +271,8 @@ export const showPlans: ShowPlan[] = [
     duration: '2 horas de apresentação',
     soundInfo:
       'Estrutura de sonorização e iluminação a ser contratada pelo contratante, de acordo com as especificações técnicas do evento.',
-    previewVideoUrl: 'https://youtube.com/shorts/WrIIcUWlcpc',
-    price: 'R$ 12.800,00',
+    previewVideoUrl: 'https://youtube.com/shorts/c7ckahPWPzk',
+    price: 'R$ 6.400,00',
     priceNote: 'Valor válido para eventos realizados em um raio de até 300 km.',
     disclaimers: [
       'Para eventos realizados a distâncias superiores a 300 km ou que necessitem de tempo adicional de apresentação, as condições e os valores poderão ser ajustados mediante negociação prévia.',
@@ -271,5 +285,5 @@ export const showPlans: ShowPlan[] = [
 // ── Footer ───────────────────────────────────────────────────────────────────
 
 export const footerContent = {
-  socialHeading: 'Siga Julia',
+  socialHeading: 'Siga Holy Hits',
 } as const

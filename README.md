@@ -1,4 +1,4 @@
-# Julia Coronetti – Venda de Show
+# Holy Hits – Venda de Show
 
 A clean, maintainable, and fully customizable landing page for an artist's show booking site.  
 Rebuilt from visual inspection of the original Lovable page, using **React 18 · TypeScript · Vite · Tailwind CSS 3**.

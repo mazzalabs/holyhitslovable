@@ -1,13 +1,13 @@
-import { Instagram, Youtube, Music2 } from 'lucide-react'
+import { Instagram, Youtube, MessageCircle } from 'lucide-react'
 import { brand } from '@/config/brand'
 import { footerContent } from '@/config/site-content'
-import { copyrightYear } from '@/lib/utils'
+import { copyrightYear, whatsappUrl } from '@/lib/utils'
 
 /**
  * Page footer with social media icon buttons and copyright.
  *
- * Social icons: Instagram, YouTube, Spotify (represented by Music2 icon).
- * To change social links edit src/config/brand.ts.
+ * Social icons: Instagram, YouTube, WhatsApp.
+ * To change social links / WhatsApp number edit src/config/brand.ts.
  */
 export function Footer() {
   const year = copyrightYear()
@@ -20,13 +20,13 @@ export function Footer() {
 
       <nav
         className="mt-8 flex justify-center gap-6"
-        aria-label="Redes sociais de Julia Coronetti"
+        aria-label="Redes sociais de Holy Hits"
       >
         <a
           href={brand.social.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Instagram de Julia Coronetti"
+          aria-label="Instagram de Holy Hits"
           className="btn-gold h-16 w-16 !p-0"
         >
           <Instagram className="h-7 w-7" aria-hidden="true" />
@@ -36,22 +36,20 @@ export function Footer() {
           href={brand.social.youtube}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="YouTube de Julia Coronetti"
+          aria-label="YouTube de Holy Hits"
           className="btn-gold h-16 w-16 !p-0"
         >
           <Youtube className="h-7 w-7" aria-hidden="true" />
         </a>
 
         <a
-          href={brand.social.spotify}
+          href={whatsappUrl(brand.whatsapp, 'Olá, gostaria de saber mais sobre os shows!')}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Spotify de Julia Coronetti"
+          aria-label="WhatsApp de Holy Hits"
           className="btn-gold h-16 w-16 !p-0"
         >
-          {/* Lucide does not have a Spotify icon; Music2 is used as a stand-in.
-              INFERRED: the original used Music2 as well. */}
-          <Music2 className="h-7 w-7" aria-hidden="true" />
+          <MessageCircle className="h-7 w-7" aria-hidden="true" />
         </a>
       </nav>
 

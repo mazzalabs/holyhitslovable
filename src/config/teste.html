@@ -1,0 +1,21 @@
+<div class="video-only-wrapper">
+  <iframe src="https://www.instagram.com/reel/C_EEY05xXpP" frameborder="0" scrolling="no"></iframe>
+</div>
+
+<style>
+.video-only-wrapper {
+  position: relative;
+  width: 320px; /* Adjust to preferred player size */
+  height: 480px; /* Adjust to preferred player size */
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.video-only-wrapper iframe {
+  position: absolute;
+  top: -55px;    /* Hides the top profile header */
+  left: 0;
+  width: 100%;
+  height: calc(100% + 120px); /* Extends height past the bottom action bar */
+}
+</style>

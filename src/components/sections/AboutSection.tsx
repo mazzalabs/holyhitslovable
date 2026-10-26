@@ -33,16 +33,12 @@ export function AboutSection() {
             {aboutContent.sectionLabel}
           </p>
 
-          <h2
+          <img
             id="about-heading"
-            className="text-gold-gradient font-display text-3xl font-black uppercase tracking-wider md:text-5xl"
-          >
-            {aboutContent.name}
-          </h2>
-
-          <p className="mt-2 font-display text-sm uppercase tracking-[0.3em] text-[var(--color-gold-soft)]">
-            {aboutContent.subtitle}
-          </p>
+            src={aboutContent.nameImage}
+            alt={aboutContent.nameImageAlt}
+            className="h-auto w-48 md:w-64"
+          />
 
           <div className="mt-8 space-y-5 font-light leading-relaxed text-[var(--color-muted-foreground)]">
             {aboutContent.paragraphs.map((para, i) => {
