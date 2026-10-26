@@ -31,8 +31,7 @@ export const brand = {
     ogTitle: 'Holy Hits — Pop Rock 80 90',
     ogDescription: 'Pop, Rock, Anos 80 90. Conheça os planos de show e contrate.',
     // Replace with an absolute URL to your own OG image (1200×630 px recommended)
-    ogImage:
-      'https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/lovp_3rvb6g71e287f9yemebzvhfs72/ad7142aab7fb68b22ed72ec4141f1cf9_1792609342091.png',
+    ogImage: 'https://holy-hits-band.lovable.app/favicon.png',
     author: 'Holy Hits',
     locale: 'pt_BR',
   },
