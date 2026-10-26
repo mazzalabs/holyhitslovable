@@ -93,15 +93,21 @@ export const aboutContent = {
   nameImage: '/images/logohorizontal.png',
   nameImageAlt: 'Holy Hits',
   paragraphs: [
-    'Adoramos os clássicos do <highlight>Pop/Rock Anos 80, 90 e 2000</highlight>, mas adoramos os <highlight>"riffs" de guitarra</highlight> mais pesados também.',
-    '- E agora, o que vamos tocar ?',
-    '- Por quê não juntar os dois ?',
+    'Somos fãs dos clássicos do <highlight>Pop/Rock dos anos 80, 90 e 2000</highlight>. Mas também não abrimos mão de <highlight>"riffs"</highlight> pesados, guitarras marcantes e solos eletrizantes.',
+    '<highlight>Então, por que não juntar tudo isso?</highlight>',
+    'Foi dessa ideia que nasceu a <highlight>Holy Hits</highlight>: uma banda que mistura grandes hits com uma pegada Rock n Roll, transformando músicas que todo mundo conhece em versões com identidade própria, arranjos modernos e muita atitude.',
+    'Já imaginou, <highlight>Tears for Fears, Depeche Mode, Erasure</highlight> e até mesmo <highlight>Haddaway</highlight> com guitarras distorcidas e solos de tirar o fôlego?',
+    '<highlight>A gente imaginou - Hits que você conhece, com uma pegada que talvez você nunca tenha ouvido antes!</highlight>',
+    'Assista aos nossos vídeos e confira essa mistura!',
+    // 'Adoramos os clássicos do <highlight>Pop/Rock Anos 80, 90 e 2000</highlight>, mas adoramos os <highlight>"riffs" de guitarra</highlight> mais pesados também.',
+    // '- E agora, o que vamos tocar ?',
+    // '- Por quê não juntar os dois ?',
     /**
      * Paragraphs can contain a single highlighted segment wrapped in a
      * `<highlight>` pseudo-tag. The component renders it as <span class="text-foreground">.
      */
-    'Dessa idéia, nasceu a banda <highlight>Holy Hits</highlight>, onde buscamos tocar os maiores clássicos porém em versões totalmente inovadoras e diferentes, trazendo versões mais modernas.',
-    'Já imaginou, <highlight>Tears for Fears, Depeche Mode, Erasure</highlight> e até mesmo <highlight>Haddaway</highlight> com guitarras e solos eletrizantes? Assita nossos videos e confira !',
+    // 'Dessa idéia, nasceu a banda <highlight>Holy Hits</highlight>, onde buscamos tocar os maiores clássicos porém em versões totalmente inovadoras e diferentes, trazendo versões mais modernas.',
+    // 'Já imaginou, <highlight>Tears for Fears, Depeche Mode, Erasure</highlight> e até mesmo <highlight>Haddaway</highlight> com guitarras e solos eletrizantes? Assita nossos videos e confira !',
   ],
 } as const
 
@@ -213,7 +219,7 @@ export const showPlans: ShowPlan[] = [
           'Guitarra Solo e vocalista',
           'Contra-Baixista e vocalista',
           'Baterista e vocalista',
-          'Técnica de som',
+          'Técnico de som',
           // 'Roadie (apoio técnico e montagem de equipamentos)',
         ],
       },
