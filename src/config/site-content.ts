@@ -64,7 +64,7 @@ export const testimonials: Testimonial[] = [
     event: 'Casamento',
     time: '21:47',
     message:
-      'Ainda estamos emocionados! Contratar vocês para o nosso casamento foi a melhor escolha que fizemos. A sanfona na entrada, a pista lotada até o fim… os convidados não param de comentar. Obrigada por tornar nosso dia inesquecível! ❤️',
+      'Ainda estamos emocionados! Contratar vocês para o nosso casamento foi a melhor escolha que fizemos. A musica do Elvis na entrada, a pista lotada até o fim… os convidados não param de comentar. Obrigada por tornar nosso dia inesquecível! ❤️',
   },
   {
     initials: 'R',
