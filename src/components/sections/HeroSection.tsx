@@ -15,14 +15,16 @@ import { heroCTAs } from '@/config/navigation'
 export function HeroSection() {
   return (
     <section
-      className="relative flex h-[100svh] min-h-[560px] items-center justify-center"
+      className="relative flex min-h-[56vw] items-center justify-center md:h-[100svh] md:min-h-[560px]"
       aria-labelledby="hero-heading"
     >
-      {/* Background image */}
+      {/* Background image:
+            mobile  – natural aspect ratio (object-contain), never cropped
+            desktop – full-viewport cover with 30% horizontal focus point      */}
       <img
         src={heroContent.backgroundImage}
         alt={heroContent.backgroundAlt}
-        className="absolute inset-0 h-full w-full object-cover object-[30%_center]"
+        className="absolute inset-0 h-full w-full object-contain object-center md:object-cover md:object-[30%_center]"
         // Not loading="lazy" – it's the LCP image
         fetchPriority="high"
       />
