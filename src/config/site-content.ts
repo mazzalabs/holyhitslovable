@@ -136,11 +136,11 @@ export type VideoItem =
     }
 
 export const videoItems: VideoItem[] = [
-  { type: 'local', src: '/images/polocerv2024.mp4', label: 'Holy Hits – video 1' },
+  { type: 'local', src: '/images/motorock2024.mp4', label: 'Holy Hits – video 1' },
+  { type: 'local', src: '/images/polocerv2024.mp4', label: 'Holy Hits – video 2' },
   // { type: 'instagram', instagramUrl: 'https://www.instagram.com/reel/C_EEY05xXpP?cr=1&v=14', label: 'Holy Hits – reel 1' },
-  { type: 'youtube', youtubeId: 'Ysg79AKPqMs', label: 'Holy Hits – vídeo 2' },
-  { type: 'local', src: '/images/motorock2024.mp4', label: 'Holy Hits – video 3' },
-  { type: 'local', src: '/images/ebpvma2025.mp4', label: 'Holy Hits – video 4' },
+  { type: 'local', src: '/images/ebpvma2025.mp4', label: 'Holy Hits – video 3' },
+  { type: 'youtube', youtubeId: 'Ysg79AKPqMs', label: 'Holy Hits – vídeo 4' },
 ]
 
 // ── Pricing Plans ─────────────────────────────────────────────────────────────
