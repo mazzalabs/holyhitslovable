@@ -1,5 +1,5 @@
-import { Play } from 'lucide-react'
-import { whatsappUrl } from '@/lib/utils'
+import { Play, FileText } from 'lucide-react'
+import { whatsappUrl, parseMarkdownLink } from '@/lib/utils'
 import { brand } from '@/config/brand'
 import type { ShowPlan } from '@/config/site-content'
 
@@ -57,15 +57,36 @@ export function PlanCard({ plan }: PlanCardProps) {
             {group.label}
           </p>
           <ul className="mt-2 space-y-1.5" aria-label={group.label}>
-            {group.items.map((item) => (
-              <li key={item} className="flex gap-2 text-sm font-light">
-                <span
-                  className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-primary)]"
-                  aria-hidden="true"
-                />
-                {item}
-              </li>
-            ))}
+            {group.items.map((item, i) => {
+              const parts = parseMarkdownLink(item)
+              return (
+                <li key={i} className="flex gap-2 text-sm font-light">
+                  <span
+                    className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--color-primary)]"
+                    aria-hidden="true"
+                  />
+                  <span>
+                    {parts.map((part, pIdx) => {
+                      if (typeof part === 'string') {
+                        return <span key={pIdx}>{part}</span>
+                      }
+                      return (
+                        <a
+                          key={pIdx}
+                          href={part.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="ml-1 inline-flex items-center gap-1 font-semibold text-[var(--color-primary)] underline underline-offset-4 transition-colors hover:text-[var(--color-foreground)]"
+                        >
+                          <FileText className="inline h-3.5 w-3.5" aria-hidden="true" />
+                          {part.label}
+                        </a>
+                      )
+                    })}
+                  </span>
+                </li>
+              )
+            })}
           </ul>
         </div>
       ))}

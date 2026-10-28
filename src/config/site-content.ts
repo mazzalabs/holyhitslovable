@@ -174,41 +174,9 @@ export const showPlans: ShowPlan[] = [
   {
     id: 'A',
     label: 'PLANO A',
-    title: 'Show Eletro-Acústico',
-    recommended: 'Bares e eventos de pequeno porte.',
-    featured: false,
-    featureGroups: [
-      {
-        label: 'Músicos',
-        items: ['Vocalista', 'Violão/Guitarra', 'Cajón (Opcional)'],
-      },
-      {
-        label: 'Backline',
-        items: [
-          'Mesa de som analogica Yamaha Emx312c',
-          'Monitores de retorno in-ear sem fio',
-          'Instrumentos com sistema sem fio',
-          'Microfones e pedestais',
-        ],
-      },
-    ],
-    duration: '2 horas de apresentação',
-    soundInfo: '2 caixas de som ativas Laney, instaladas em pedestais.',
-    previewVideoUrl: 'https://youtube.com/shorts/6RCHStmLNAw',
-    price: 'R$ 900,00',
-    priceNote: '',
-    disclaimers: [
-      'O valor é válido para eventos realizados em um raio de até 60 km. Para distâncias superiores, necessidade de estrutura de som adicional ou tempo extra de apresentação, os valores poderão ser ajustados mediante negociação prévia.',
-      'O valor não inclui alimentação e, quando necessário, hospedagem da equipe, ficando esses custos sob responsabilidade do contratante.',
-    ],
-    whatsappMessage: 'Olá, gostei do PLANO A',
-  },
-  {
-    id: 'B',
-    label: 'PLANO B',
     title: 'Show com Banda',
     recommended:
-      'Pubs, baladas, eventos corporativos, aniversários, casamentos e formaturas.',
+      'Pubs, baladas, bares e aniversários.',
     featured: true,
     badge: '★ MAIS ESCOLHIDO',
     featureGroups: [
@@ -245,6 +213,38 @@ export const showPlans: ShowPlan[] = [
       'Também é possível adaptar a formação da equipe, com a redução do número de integrantes, para adequar o investimento às necessidades e ao orçamento do contratante.',
       'O valor não inclui alimentação e, quando necessário, hospedagem da equipe, ficando esses custos sob responsabilidade do contratante.',
     ],
+    whatsappMessage: 'Olá, gostei do PLANO A',
+  },
+  {
+    id: 'B',
+    label: 'PLANO B',
+    title: 'Show Eletro-Acústico',
+    recommended: 'Bares, aniversários e eventos de pequeno porte.',
+    featured: false,
+    featureGroups: [
+      {
+        label: 'Músicos',
+        items: ['Vocalista', 'Violão/Guitarra', 'Cajón (Opcional)'],
+      },
+      {
+        label: 'Backline',
+        items: [
+          'Mesa de som analogica Yamaha Emx312c',
+          'Monitores de retorno in-ear sem fio',
+          'Instrumentos com sistema sem fio',
+          'Microfones e pedestais',
+        ],
+      },
+    ],
+    duration: '2 horas de apresentação',
+    soundInfo: '2 caixas de som ativas Laney, instaladas em pedestais.',
+    previewVideoUrl: 'https://youtube.com/shorts/6RCHStmLNAw',
+    price: 'R$ 900,00',
+    priceNote: '',
+    disclaimers: [
+      'O valor é válido para eventos realizados em um raio de até 60 km. Para distâncias superiores, necessidade de estrutura de som adicional ou tempo extra de apresentação, os valores poderão ser ajustados mediante negociação prévia.',
+      'O valor não inclui alimentação e, quando necessário, hospedagem da equipe, ficando esses custos sob responsabilidade do contratante.',
+    ],
     whatsappMessage: 'Olá, gostei do PLANO B',
   },
   {
@@ -252,7 +252,7 @@ export const showPlans: ShowPlan[] = [
     label: 'PLANO C',
     title: 'Grandes Eventos',
     recommended:
-      'Grandes eventos, feiras, festividades e comemorações político-administrativas de municípios.',
+      'Grandes eventos, casamentos, feiras, festividades e comemorações político-administrativas de municípios.',
     featured: false,
     featureGroups: [
       {
@@ -270,7 +270,7 @@ export const showPlans: ShowPlan[] = [
       {
         label: 'Backline',
         items: [
-          'Estrutura de backline a ser contratada conforme as necessidades técnicas da apresentação.',
+          'Estrutura de backline a ser contratada conforme as necessidades técnicas da apresentação. [VEJA RIDER TÉCNICO](/images/Rider_Tecnico_HolyHits_Palco_Atualizado.pdf)',
         ],
       },
     ],

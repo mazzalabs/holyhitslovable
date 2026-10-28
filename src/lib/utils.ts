@@ -67,3 +67,17 @@ export function parseHighlight(text: string): Array<string | { highlight: string
     return m ? { highlight: m[1] } : part
   })
 }
+
+/**
+ * Parses markdown-style links `[label](href)` inside text strings.
+ */
+export function parseMarkdownLink(text: string): Array<string | { label: string; href: string }> {
+  const parts = text.split(/(\[[^\]]+\]\([^)]+\))/g)
+  return parts.map((part) => {
+    const match = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+    if (match) {
+      return { label: match[1], href: match[2] }
+    }
+    return part
+  })
+}
