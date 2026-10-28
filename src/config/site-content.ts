@@ -39,7 +39,7 @@ export interface GalleryItem {
 export const galleryItems: GalleryItem[] = [
   { src: '/images/anaclara.jpg',           alt: 'Holy Hits no palco' },
   { src: '/images/will.jpg', alt: 'Holy Hits ao microfone' },
-  { src: '/images/bruno.jpg',  alt: 'Holy Hits com seu acordeon' },
+  { src: '/images/bruno.jpg',  alt: 'Holy Hits ao vivo' },
   { src: '/images/gaza.jpg',           alt: 'Holy Hits ao vivo' },
   { src: '/images/ale.jpg',   alt: 'Holy Hits no estúdio' },
   // { src: '/images/gallery/g6.jpg',           alt: 'Holy Hits em show' },
@@ -88,7 +88,7 @@ export const testimonials: Testimonial[] = [
 
 export const aboutContent = {
   image: '/images/bandastage.jpg',
-  imageAlt: 'Holy Hits com seu acordeon',
+  imageAlt: 'Banda Holy Hits no palco',
   sectionLabel: 'Release',
   nameImage: '/images/logohorizontal.png',
   nameImageAlt: 'Holy Hits',
