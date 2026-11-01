@@ -17,14 +17,14 @@ export const heroContent = {
    * Replace with your own image in /public/images/hero.jpg
    */
   backgroundImage: '/images/hero.jpg',
-  backgroundAlt: 'Holy Hits',
+  backgroundAlt: 'Banda Holy Hits Pop Rock 80 90 e 2000 Campinas SP Shows e Eventos',
 
   /**
    * Logo image used as a CSS mask so the gradient shines through.
    * Replace with your own PNG (white silhouette on transparent background).
    */
   logoImage: '/images/logo.png',
-  logoAlt: 'Holy Hits',
+  logoAlt: 'Banda Holy Hits Pop Rock 80 90 e 2000 Campinas SP Shows e Eventos',
   /** Aspect ratio of the logo image in the format width/height */
   logoAspectRatio: '1278/542',
 } as const
@@ -88,10 +88,10 @@ export const testimonials: Testimonial[] = [
 
 export const aboutContent = {
   image: '/images/bandastage.jpg',
-  imageAlt: 'Banda Holy Hits no palco',
+  imageAlt: 'Banda Holy Hits Pop Rock 80 90 e 2000 Campinas SP Shows e Eventos',
   sectionLabel: 'Release',
   nameImage: '/images/logohorizontal.png',
-  nameImageAlt: 'Holy Hits',
+  nameImageAlt: 'Banda Holy Hits Pop Rock 80 90 e 2000 Campinas SP Shows e Eventos',
   paragraphs: [
     'Somos fãs dos clássicos do <highlight>Pop/Rock dos anos 80, 90 e 2000</highlight>. Mas também não abrimos mão de <highlight>"riffs"</highlight> pesados, guitarras marcantes e solos eletrizantes.',
     '<highlight>Então, por que não juntar tudo isso?</highlight>',
