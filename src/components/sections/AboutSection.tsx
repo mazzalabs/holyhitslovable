@@ -10,6 +10,9 @@ import { parseHighlight } from '@/lib/utils'
  * - Mobile: single column, image on top
  * - Desktop (md+): 2:3 grid, image left / text right
  *
+ * The section is labelled by a real <h2> (id="about-heading") so the page's
+ * heading structure stays complete; the wordmark image below it is decoration.
+ *
  * Paragraphs support a single <highlight>…</highlight> pseudo-tag which
  * renders as a brighter foreground span (see src/lib/utils.ts).
  */
@@ -33,11 +36,19 @@ export function AboutSection() {
             {aboutContent.sectionLabel}
           </p>
 
-          <img
+          <h2
             id="about-heading"
+            className="font-display text-2xl font-bold uppercase tracking-widest text-gold-gradient md:text-4xl"
+          >
+            {aboutContent.heading}
+          </h2>
+
+          {/* Band wordmark – decorative, the heading above already names the band */}
+          <img
             src={aboutContent.nameImage}
-            alt={aboutContent.nameImageAlt}
-            className="h-auto w-48 md:w-64"
+            alt=""
+            aria-hidden="true"
+            className="mt-5 h-auto w-48 md:w-64"
           />
 
           <div className="mt-8 space-y-5 font-light leading-relaxed text-[var(--color-muted-foreground)]">
