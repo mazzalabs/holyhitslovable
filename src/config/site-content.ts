@@ -90,6 +90,7 @@ export const aboutContent = {
   image: '/images/bandastage.jpg',
   imageAlt: 'Banda Holy Hits Pop Rock 80 90 e 2000 Campinas SP Shows e Eventos',
   sectionLabel: 'Release',
+  heading: 'Sobre a banda Holy Hits',
   nameImage: '/images/logohorizontal.png',
   nameImageAlt: 'Banda Holy Hits Pop Rock 80 90 e 2000 Campinas SP Shows e Eventos',
   paragraphs: [
